@@ -14,6 +14,7 @@
 ## Repositorio del proyecto
 - Estructura mínima creada: `README.md`, `LICENSE`, `.gitignore`, `requirements.txt`, `app/`, `tests/`, `.github/workflows/ci.yml`, `Dockerfile`.
 - El **README** explica el problema (basado en servidor, lógica real, beneficio cloud) y **enlaza a este documento**.
+![README enlazando al hito](img/readme_enlace_hito.png)
 
 ## Buenas prácticas de Git/GitHub
 - Milestone **Hito 1** creado.
