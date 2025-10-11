@@ -2,7 +2,10 @@
 
 ## Entorno y seguridad (GitHub)
 - Perfil completo (nombre, ciudad, universidad) y **2FA** activado.
-- **SSH** OK: salida de `ssh -T git@github.com` con tu usuario.
+- ![Perfil completo](img/perfil_completo.png)
+![2FA activado](img/2fa_activado.png)
+
+- **SSH** OK: salida de `ssh -T git@github.com` 
 - `git config --global user.name` y `user.email` correctos (captura).
 
 ## Repositorio del proyecto
