@@ -7,6 +7,9 @@
 
 - **SSH** OK: salida de `ssh -T git@github.com` 
 - `git config --global user.name` y `user.email` correctos (captura).
+- ![ssh -T](img/ssh_ok.png)
+![git config --global](img/git_config.png)
+
 
 ## Repositorio del proyecto
 - Estructura mínima creada: `README.md`, `LICENSE`, `.gitignore`, `requirements.txt`, `app/`, `tests/`, `.github/workflows/ci.yml`, `Dockerfile`.
