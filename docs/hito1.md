@@ -1,23 +1,28 @@
 # Hito 1 — Evidencias (Carlos Gutiérrez)
 
-## Entorno y seguridad
-- Capturas: perfil con datos, **2FA** activo.
-- **SSH** OK: salida de `ssh -T git@github.com`.
-- `git config --global user.name` y `user.email`.
+## Entorno y seguridad (GitHub)
+- Perfil completo (nombre, ciudad, universidad) y **2FA** activado.
+- **SSH** OK: salida de `ssh -T git@github.com` con tu usuario.
+- `git config --global user.name` y `user.email` correctos (captura).
 
 ## Repositorio del proyecto
-- Estructura mínima: README, LICENSE, .gitignore, requirements, app/, tests/, CI.
-- README explica el problema y enlaza a este documento.
+- Estructura mínima creada: `README.md`, `LICENSE`, `.gitignore`, `requirements.txt`, `app/`, `tests/`, `.github/workflows/ci.yml`, `Dockerfile`.
+- El **README** explica el problema (basado en servidor, lógica real, beneficio cloud) y **enlaza a este documento**.
 
-## Buenas prácticas
-- Milestone **Hito 1**.
+## Buenas prácticas de Git/GitHub
+- Milestone **Hito 1** creado.
 - Issues creados y cerrados con commits (`closes #N`).
+- Commits pequeños y descriptivos. Sin binarios ni generados (uso de `.gitignore`).
 
 ## CI/CD y seguridad
-- GitHub Actions (tests) en verde.
-- **Dependabot** configurado.
-- **CodeQL** activado.
-- **Secret scanning** activo.
+- **GitHub Actions (CI)** ejecuta `pytest` en cada push/PR (captura en verde).
+- **Dependabot** configurado para `pip`.
+- **CodeQL** activado para Python (alertas en *Security → Code scanning*).
+- **Secret scanning** habilitado.
 
-## Pruebas
-- Captura de `/docs` y ejemplo de `POST /check` con respuesta.
+## Pruebas del servicio
+- Captura de Swagger `/docs` con `POST /check`.
+- Ejemplo de respuesta con `{"password": "password"}` → `{"pwned": true, "count": N}`.
+
+## Enlace de entrega
+- (Aquí pon el enlace a este archivo en GitHub.)
