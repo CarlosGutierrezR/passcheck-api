@@ -17,3 +17,7 @@ uvicorn app.main:app --reload
 
 clear
 OFF
+
+## Seguridad
+Este proyecto usa **SHA-1** únicamente para el método **k-Anonymity** de *Pwned Passwords*.
+No se almacena ni usa para autenticación. Para almacenamiento de contraseñas se recomiendan **Argon2/bcrypt/scrypt**.
