@@ -20,6 +20,10 @@
 - Milestone **Hito 1** creado.
 - Issues creados y cerrados con commits (`closes #N`).
 - Commits pequeños y descriptivos. Sin binarios ni generados (uso de `.gitignore`).
+- ![Milestone Hito 1](img/milestone_hito1.png)
+![Issues listados](img/issues_list.png)
+![Commit cerrando issue](img/commit_closes.png)
+
 
 ## CI/CD y seguridad
 - **GitHub Actions (CI)** ejecuta `pytest` en cada push/PR (captura en verde).
