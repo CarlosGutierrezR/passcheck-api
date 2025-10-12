@@ -38,6 +38,8 @@
 ## Pruebas del servicio
 - Captura de Swagger `/docs` con `POST /check`.
 - Ejemplo de respuesta con `{"password": "password"}` → `{"pwned": true, "count": N}`.
+![Swagger /docs](img/swagger_docs.png)
+![POST /check respuesta](img/endpoint_check_ok.png)
 
 ## Enlace de entrega
 - (Aquí pon el enlace a este archivo en GitHub.)
