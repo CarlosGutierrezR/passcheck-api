@@ -30,6 +30,10 @@
 - **Dependabot** configurado para `pip`.
 - **CodeQL** activado para Python (alertas en *Security → Code scanning*).
 - **Secret scanning** habilitado.
+- ![CI en verde](img/ci_green.png)
+![CodeQL en verde](img/codeql_green.png)
+![Dependabot activo](img/dependabot.png)
+![Secret scanning activo](img/secret_scanning.png)
 
 ## Pruebas del servicio
 - Captura de Swagger `/docs` con `POST /check`.
