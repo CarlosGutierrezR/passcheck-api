@@ -41,7 +41,7 @@
 ![Swagger /docs](img/swagger_docs.png)
 ![POST /check respuesta](img/endpoint_check_ok.png)
 
-## 5) Política de sincronización (rebase) con el repo de la asignatura
+## Política de sincronización (rebase) con el repo de la asignatura
 
 Antes de cada entrega sincronizo **mi fork** con el repositorio de la asignatura usando **rebase** para mantener un historial limpio (sin *merge commits*):
 
