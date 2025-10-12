@@ -42,4 +42,5 @@
 ![POST /check respuesta](img/endpoint_check_ok.png)
 
 ## Enlace de entrega
-- (Aquí pon el enlace a este archivo en GitHub.)
+-[docs/hito1.md](https://github.com/CarlosGutierrezR/passcheck-api/blob/main/docs/hito1.md)
+
