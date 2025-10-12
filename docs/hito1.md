@@ -50,6 +50,7 @@ Antes de cada entrega sincronizo **mi fork** con el repositorio de la asignatura
 1) https://github.com/cvillalonga/CC-25-26
 2) https://github.com/CarlosGutierrezR/passcheck-api/blob/main/docs/hito1.md
 3) https://github.com/cvillalonga/CC-25-26/pull/30
+![PR creado](img/entrega_pr.png)
 
 
 ## Enlace de entrega
