@@ -60,7 +60,6 @@ sequenceDiagram
     H-->>API: SUFFIX:COUNT\nSUFFIX:COUNT...
     API->>API: Buscar SUFFIX de FULL_HASH en la lista
     API-->>C: { "pwned": bool, "count": N }
-
 Requisitos
 Windows (PowerShell/Git Bash) o Linux/macOS
 
