@@ -41,6 +41,27 @@
 ![Swagger /docs](img/swagger_docs.png)
 ![POST /check respuesta](img/endpoint_check_ok.png)
 
+## 5) Política de sincronización (rebase) con el repo de la asignatura
+
+Antes de cada entrega sincronizo **mi fork** con el repositorio de la asignatura usando **rebase** para mantener un historial limpio (sin *merge commits*):
+
+```bash
+git checkout main
+git remote add upstream git@github.com:cvillalonga/CC-25-26.git  # una sola vez
+git fetch upstream
+git rebase upstream/main
+git push -f origin main
+```
+
+
+---
+
+### ✅ 7) Entrega (Fork + PR)
+
+1) https://github.com/cvillalonga/CC-25-26
+2) https://github.com/CarlosGutierrezR/passcheck-api/blob/main/docs/hito1.md
+
+
 ## Enlace de entrega
 -[docs/hito1.md](https://github.com/CarlosGutierrezR/passcheck-api/blob/main/docs/hito1.md)
 
