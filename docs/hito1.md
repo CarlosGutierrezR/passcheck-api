@@ -45,17 +45,6 @@
 
 Antes de cada entrega sincronizo **mi fork** con el repositorio de la asignatura usando **rebase** para mantener un historial limpio (sin *merge commits*):
 
-```bash
-git checkout main
-git remote add upstream git@github.com:cvillalonga/CC-25-26.git  # una sola vez
-git fetch upstream
-git rebase upstream/main
-git push -f origin main
-```
-
-
----
-
 ### ✅ 7) Entrega (Fork + PR)
 
 1) https://github.com/cvillalonga/CC-25-26
