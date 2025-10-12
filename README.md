@@ -108,76 +108,7 @@ docker build -t passcheck-api:latest .
 # Run
 docker run -p 8000:8000 passcheck-api:latest
 # → http://127.0.0.1:8000/docs
-API
-POST /check
-Body
 
-json
-Copiar código
-{ "password": "string" }
-200 OK
-
-json
-Copiar código
-{ "pwned": true, "count": 12345 }
-422 Unprocessable Entity — JSON inválido o campo ausente
-500 Internal Server Error — fallo externo (timeout/HIBP no disponible)
-
-curl
-
-bash
-Copiar código
-curl -X POST http://127.0.0.1:8000/check \
-  -H "Content-Type: application/json" \
-  -d "{\"password\":\"password\"}"
-Seguridad
-SHA-1 se usa intencionalmente porque lo exige el endpoint de HIBP para k-Anonymity.
-No se usa para almacenamiento/autenticación. Recomendado para credenciales: Argon2 / bcrypt / scrypt.
-(CodeQL suprimido con comentario justificado en app/hibp.py.)
-
-HTTPX con timeout y User-Agent explícito.
-
-Secret scanning habilitado en el repo.
-
-CI/CD
-CI: pytest -m "not network" en push/PR.
-
-CodeQL: análisis estático (push/PR + cron).
-
-Dependabot: actualizaciones semanales para pip.
-
-Badges arriba 👆
-
-Estructura del repo
-bash
-Copiar código
-passcheck-api/
-  app/
-    __init__.py
-    hibp.py          # lógica HIBP k-Anonymity
-    main.py          # FastAPI app
-  tests/
-    test_api.py
-  .github/
-    workflows/
-      ci.yml
-      codeql.yml
-    dependabot.yml
-  docs/
-    hito1.md
-  Dockerfile
-  pytest.ini
-  requirements.txt
-  README.md
-  LICENSE
-Roadmap
- GET /health (healthcheck)
-
- Rate limiting básico
-
- Métricas Prometheus
-
- Imagen multi-stage aún más pequeña
 
 Doc del Hito
 Toda la evidencia del Hito 1:
