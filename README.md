@@ -118,9 +118,10 @@ docker run -p 8000:8000 passcheck-api:latest
 https://github.com/cvillalonga/CC-25-26/pull/30
 -[docs/hito1.md](https://github.com/CarlosGutierrezR/passcheck-api/blob/main/docs/hito1.md)
 ➡️ docs/hito1.md
+
 # Hito 2
 https://github.com/CarlosGutierrezR/passcheck-api/pull/6
--https://github.com/CarlosGutierrezR/passcheck-api/blob/main/docs/hito2.md
+(https://github.com/CarlosGutierrezR/passcheck-api/blob/main/docs/hito2.md)
 
 Licencia
 MIT — ver LICENSE.
