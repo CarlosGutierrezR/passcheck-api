@@ -31,4 +31,5 @@
 
 ## 5) Entrega (Fork + PR)
 - Enlace a este documento: https://github.com/CarlosGutierrezR/passcheck-api/blob/main/docs/hito2.md
-- **URL del PR al repo de la asignatura:** _(añadir cuando se cree)_
+https://github.com/CarlosGutierrezR/passcheck-api/pull/6
+
