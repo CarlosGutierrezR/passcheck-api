@@ -1,6 +1,9 @@
 <div align="center">
 
 # PassCheck API
+[![CI](https://github.com/CarlosGutierrezR/passcheck-api/actions/workflows/ci.yml/badge.svg)](https://github.com/CarlosGutierrezR/passcheck-api/actions)
+[![CodeQL](https://github.com/CarlosGutierrezR/passcheck-api/actions/workflows/codeql.yml/badge.svg)](https://github.com/CarlosGutierrezR/passcheck-api/actions)
+
 
 Microservicio en **FastAPI** que verifica si una contraseña apareció en brechas públicas usando **k-Anonymity** (Pwned Passwords).  
 Privado por diseño: no almacena contraseñas ni hashes completos.
