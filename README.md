@@ -48,7 +48,6 @@ Privado por diseño: no almacena contraseñas ni hashes completos.
 - 🐳 **Contenedor**: `Dockerfile` minimal listo para deploy.
 
 ---
-
 ## Arquitectura
 
 ```mermaid
