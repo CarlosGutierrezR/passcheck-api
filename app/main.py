@@ -1,13 +1,28 @@
+# app/main.py
+import logging
 from fastapi import FastAPI
-from pydantic import BaseModel
-from .hibp import pwned_count
+from pydantic import BaseModel, Field
+from app.service import check_password
 
-app = FastAPI(title="PassCheck API", version="0.1.0")
+# --- Logging básico (consola) ---
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s [%(name)s] %(message)s",
+)
+logger = logging.getLogger("passcheck.api")
+
+app = FastAPI(title="PassCheck API", version="0.2.0")
 
 class CheckRequest(BaseModel):
-    password: str
+    password: str = Field(..., min_length=1, max_length=512)
 
-@app.post("/check")
+class CheckResponse(BaseModel):
+    pwned: bool
+    count: int
+
+@app.post("/check", response_model=CheckResponse)
 def check(req: CheckRequest):
-    count = pwned_count(req.password)
-    return {"pwned": count > 0, "count": count}
+    logger.info("POST /check request received")
+    result = check_password(req.password)
+    logger.info("POST /check result pwned=%s count=%d", result["pwned"], result["count"])
+    return result
