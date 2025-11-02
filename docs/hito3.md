@@ -17,10 +17,8 @@ Implementar un servicio HTTP con \*\*API REST\*\*, \*\*diseño por capas\*\* (AP
 \- \*\*Capa de Integración\*\* (`app/hibp.py`): acceso a HIBP (k-Anonymity) con `httpx`; \*\*manejo de timeout/errores\*\* y retorno seguro `0`.
 
 
-
-\*\*Evidencia (estructura de capas):\*\*  
-
-!\[capas](img/h3\_capas.png)
+**Evidencia (estructura de capas):**
+![capas](img/h3_capas.png)
 
 
 
@@ -35,17 +33,13 @@ Implementar un servicio HTTP con \*\*API REST\*\*, \*\*diseño por capas\*\* (AP
 &nbsp; \*\*Resp 422:\*\* validación por campo faltante o vacío.
 
 
-
-\*\*Swagger (docs):\*\*  
-
-!\[swagger](img/h3\_swagger.png)
-
+**Swagger (docs):**
+![swagger](img/h3_swagger.png)
 
 
 \*\*Ejecución en Swagger (200 OK):\*\*  
 
-!\[swagger post ok](img/h3\_swagger\_post\_ok.png)
-
+![post_ok](img/h3_swagger_post_ok.png)
 
 
 \## 4) Pruebas del API (sin red)
@@ -58,9 +52,8 @@ Implementar un servicio HTTP con \*\*API REST\*\*, \*\*diseño por capas\*\* (AP
 
 
 
-\*\*Pytest local (OK):\*\*  
-
-!\[pytest ok](img/h3\_pytest\_ok.png)
+**Pytest (sin red):**
+![pytest_ok](img/h3_pytest_ok.png)
 
 
 
@@ -74,7 +67,7 @@ Implementar un servicio HTTP con \*\*API REST\*\*, \*\*diseño por capas\*\* (AP
 
 \*\*Ejemplo (consola):\*\*  
 
-!\[logging](img/h3\_logging.png)
+![logging](img/h3_logging.png)
 
 
 
@@ -86,7 +79,7 @@ Implementar un servicio HTTP con \*\*API REST\*\*, \*\*diseño por capas\*\* (AP
 
 \*\*CI YAML:\*\*  
 
-!\[ci yaml](img/h3\_ci\_yaml.png)
+![ci_yaml](img/h3_ci_yaml.png)
 
 
 
