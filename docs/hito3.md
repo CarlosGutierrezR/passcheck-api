@@ -1,14 +1,14 @@
-\# Hito 3 — Microservicio con API REST, diseño por capas y registros (PassCheck API)
+\ Hito 3 — Microservicio con API REST, diseño por capas y registros (PassCheck API)
 
 
 
-\## 1) Objetivo
+\1) Objetivo
 
 Implementar un servicio HTTP con \*\*API REST\*\*, \*\*diseño por capas\*\* (API → Servicio → Integración), \*\*pruebas del API\*\* sin red y \*\*logging\*\*. Se muestra además el fichero de automatización (CI).
 
 
 
-\## 2) Arquitectura por capas
+\ 2) Arquitectura por capas
 
 \- \*\*Capa API\*\* (`app/main.py`): expone `POST /check` con FastAPI; valida el body y registra eventos.
 
@@ -22,7 +22,7 @@ Implementar un servicio HTTP con \*\*API REST\*\*, \*\*diseño por capas\*\* (AP
 
 
 
-\## 3) API REST — Endpoint
+\3) API REST — Endpoint
 
 \- \*\*POST\*\* `/check`  
 
@@ -42,7 +42,7 @@ Implementar un servicio HTTP con \*\*API REST\*\*, \*\*diseño por capas\*\* (AP
 ![post_ok](img/h3_swagger_post_ok.png)
 
 
-\## 4) Pruebas del API (sin red)
+\ 4) Pruebas del API (sin red)
 
 \- `tests/test\_api\_endpoint.py`: 200 OK + contrato `{pwned, count}`.
 
@@ -57,7 +57,7 @@ Implementar un servicio HTTP con \*\*API REST\*\*, \*\*diseño por capas\*\* (AP
 
 
 
-\## 5) Logging
+\ 5) Logging
 
 \- Configurado en `app/main.py` (API) y `app/service.py` (latencia) y `app/hibp.py` (errores de red/timeout).
 
@@ -71,7 +71,7 @@ Implementar un servicio HTTP con \*\*API REST\*\*, \*\*diseño por capas\*\* (AP
 
 
 
-\## 6) Automatización (fichero de construcción)
+\ 6) Automatización (fichero de construcción)
 
 \- \*\*GitHub Actions\*\* (`.github/workflows/ci.yml`) instala dependencias y ejecuta `pytest -m "not network"` en cada push/PR.
 
@@ -83,7 +83,7 @@ Implementar un servicio HTTP con \*\*API REST\*\*, \*\*diseño por capas\*\* (AP
 
 
 
-\## 7) Enlaces
+\ 7) Enlaces
 
 \- Actions: https://github.com/CarlosGutierrezR/passcheck-api/actions  
 
@@ -93,13 +93,8 @@ Implementar un servicio HTTP con \*\*API REST\*\*, \*\*diseño por capas\*\* (AP
 
 
 
-\## 8) Entrega (Fork + PR)
+\ 8) Entrega (Fork + PR)
 
 \- Enlace a este documento: https://github.com/CarlosGutierrezR/passcheck-api/blob/main/docs/hito3.md  
-
-\- \*\*URL del PR al repo de la asignatura:\*\* \_(añadir cuando se cree)\_
-
-
-
 
 **Entrega:** PR #56 — https://github.com/cvillalonga/CC-25-26/pull/56
