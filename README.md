@@ -67,13 +67,13 @@ sequenceDiagram
 Requisitos
 Windows (PowerShell/Git Bash) o Linux/macOS
 
-Python 3.11+ y Git
+Python 3.13+ y Git
 
-(Opcional) Docker
+Docker
 
 Empezar (Local)
 bash
-Copiar código
+
 # 1) Clonar
 git clone git@github.com:CarlosGutierrezR/passcheck-api.git
 cd passcheck-api
@@ -81,7 +81,7 @@ cd passcheck-api
 # 2) Entorno
 # Windows (PowerShell):  .\.venv\Scripts\Activate.ps1
 # Git Bash:              source .venv/Scripts/activate
-py -3.11 -m venv .venv
+py -3.14 -m venv .venv
 source .venv/Scripts/activate
 
 # 3) Dependencias
@@ -93,7 +93,7 @@ python -m uvicorn app.main:app --reload
 # → http://127.0.0.1:8000/docs
 Tests
 bash
-Copiar código
+
 # Unit (sin red) — lo que corre el CI
 python -m pytest -q -m "not network"
 
@@ -103,7 +103,7 @@ La marca network está registrada en pytest.ini y se excluye del CI.
 
 Docker
 bash
-Copiar código
+
 # Build
 docker build -t passcheck-api:latest .
 
