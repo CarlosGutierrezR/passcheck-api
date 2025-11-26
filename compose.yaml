@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    image: ghcr.io/carlosgutierrezr/passcheck-api:latest
+    container_name: passcheck-api
+    ports:
+      - "8000:8000"
+    depends_on:
+      - cache
+      - logger
+
+  cache:
+    image: redis:7-alpine
+    container_name: passcheck-cache
+    command: ["redis-server", "--save", "60", "1", "--loglevel", "warning"]
+    volumes:
+      - redis-data:/data
+
+  logger:
+    build: ./logger
+    image: ghcr.io/carlosgutierrezr/passcheck-logger:latest
+    container_name: passcheck-logger
+    ports:
+      - "9000:9000"
+    environment:
+      - "REDIS_URL=redis://cache:6379/0"
+    depends_on:
+      - cache
+
+volumes:
+  redis-data:
