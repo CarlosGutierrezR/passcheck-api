@@ -8,6 +8,15 @@ A continuación se muestra la documentación visual del sistema.
 
 ---
 
+## 🖥️ Evidencia de ejecución del contenedor en Docker Desktop
+
+La siguiente captura demuestra que el microservicio `passcheck-api` se ejecuta correctamente en Docker Desktop.  
+El servicio se levanta sin errores fuera del entorno de pruebas del clúster.
+
+![Docker Status](img/docker_status.png)
+
+---
+
 ## 🚀 Arquitectura del clúster (Docker Compose)
 
 ![Compose](img/compose.png)
