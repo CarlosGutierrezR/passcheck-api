@@ -8,37 +8,37 @@ A continuación se muestra la documentación visual del sistema.
 
 ## 🚀 Arquitectura del clúster (Docker Compose)
 
-![Compose](docs/img/compose.png)
+![Compose](img/compose.png)
 
 ---
 
 ## 🐳 Arranque del clúster
 
-![Arranque](docs/img/arranque.png)
+![Arranque](img/arranque.png)
 
 ---
 
 ## 📦 Microservicio principal (API)
 
-![API](docs/img/docker.png)
+![API](img/docker.png)
 
 ---
 
 ## 📝 Microservicio Logger
 
-![Logger](docs/img/logger.png)
+![Logger](img/logger.png)
 
 ---
 
 ## 🔧 Estructura del microservicio Logger
 
-![Micro Logger](docs/img/micro_logger.png)
+![Micro Logger](img/micro_logger.png)
 
 ---
 
 ## 🧪 Test End-to-End del clúster
 
-![Test Cluster](docs/img/test_cluster_compose.png)
+![Test Cluster](img/test_cluster_compose.png)
 
 ---
 
