@@ -11,7 +11,12 @@ logging.basicConfig(
 )
 logger = logging.getLogger("passcheck.api")
 
-app = FastAPI(title="PassCheck API", version="0.2.0")
+app = FastAPI(
+    title="PassCheck API",
+    version="0.2.0",
+    docs_url="/docs",
+    openapi_url="/openapi.json"
+)
 
 class CheckRequest(BaseModel):
     password: str = Field(..., min_length=1, max_length=512)
