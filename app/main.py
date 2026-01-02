@@ -26,3 +26,7 @@ def check(req: CheckRequest):
     result = check_password(req.password)
     logger.info("POST /check result pwned=%s count=%d", result["pwned"], result["count"])
     return result
+
+@app.get("/health", tags=["health"])
+def health():
+    return {"status": "ok"}
