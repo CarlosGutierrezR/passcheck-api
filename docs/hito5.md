@@ -4,7 +4,7 @@
 
 En este quinto hito se ha realizado el despliegue de la aplicación **PassCheck API** en un entorno **PaaS (Platform as a Service)**, con el objetivo de publicar el servicio en un entorno cloud real y accesible desde Internet.
 
-El propósito principal de este hito es validar que la aplicación desarrollada en los hitos anteriores no solo funciona correctamente en un entorno local, sino que es **desplegable, operativa y verificable en un entorno de producción**, siguiendo prácticas habituales utilizadas en entornos profesionales.
+El propósito de este hito es validar que la aplicación desarrollada en los hitos anteriores no solo funciona correctamente en local, sino que es **desplegable, operativa y verificable en un entorno de producción**, siguiendo prácticas habituales en entornos profesionales.
 
 ---
 
@@ -17,22 +17,22 @@ La API expone los siguientes endpoints principales:
 - **POST `/check`**: comprueba si una contraseña ha sido comprometida.
 - **GET `/health`**: endpoint de estado para verificar que el servicio está operativo.
 
-Además, la aplicación genera automáticamente documentación **OpenAPI**, accesible mediante **Swagger UI**, lo que facilita la exploración y el consumo de la API.
+Además, la aplicación genera automáticamente documentación **OpenAPI**, accesible mediante **Swagger UI**.
 
 ---
 
 ## 3. Plataforma PaaS seleccionada
 
-Para el despliegue se ha seleccionado la plataforma **Render**, ya que ofrece:
+Para el despliegue se ha utilizado la plataforma **Render**, debido a las siguientes ventajas:
 
-- Integración directa con repositorios **GitHub**
-- Soporte nativo para aplicaciones contenerizadas con **Docker**
-- Gestión automática de puertos dinámicos mediante la variable de entorno `PORT`
-- Certificados **HTTPS** habilitados por defecto
-- Visualización centralizada de logs
-- Plan gratuito suficiente para validaciones académicas y técnicas
+- Integración directa con repositorios GitHub  
+- Soporte nativo para aplicaciones Docker  
+- Asignación automática de puertos mediante la variable `PORT`  
+- Certificados HTTPS por defecto  
+- Visualización de logs en tiempo real  
+- Plan gratuito suficiente para validación académica  
 
-El servicio se configuró como un **Web Service**, conectado directamente a la rama `main` del repositorio del proyecto.
+El servicio fue configurado como un **Web Service**, enlazado a la rama `main` del repositorio.
 
 ---
 
@@ -40,7 +40,7 @@ El servicio se configuró como un **Web Service**, conectado directamente a la r
 
 ### 4.1 Panel del servicio en Render
 
-En la siguiente imagen se observa el panel de Render con el servicio **passcheck-api** desplegado correctamente y en estado **Live**:
+El panel de Render muestra el servicio **passcheck-api** desplegado correctamente y en estado *Live*.
 
 ![Panel del servicio en Render](img/hito5/01-render-dashboard.png)
 
@@ -48,12 +48,7 @@ En la siguiente imagen se observa el panel de Render con el servicio **passcheck
 
 ### 4.2 Logs de despliegue y arranque del servicio
 
-Los logs del servicio confirman que:
-
-- La imagen Docker se construyó correctamente
-- El proceso Uvicorn se inició sin errores
-- Render detectó correctamente el puerto asignado dinámicamente
-- El servicio quedó disponible públicamente
+Los logs confirman que el contenedor se construyó correctamente, el servidor Uvicorn se inició sin errores y el servicio quedó disponible públicamente.
 
 ![Logs del servicio en Render](img/hito5/02-render-logs-live.png)
 
@@ -66,3 +61,59 @@ Los logs del servicio confirman que:
 El endpoint de verificación de estado responde correctamente indicando que el servicio está operativo.
 
 **URL pública:**
+
+https://passcheck-api.onrender.com/health
+
+**Respuesta obtenida:**
+
+  "status": "ok"
+
+
+Evidencia:
+
+5.2 Documentación interactiva (Swagger UI)
+
+FastAPI genera automáticamente la documentación interactiva accesible en:
+
+https://passcheck-api.onrender.com/docs
+
+En esta interfaz se pueden visualizar los endpoints disponibles, así como los esquemas de petición y respuesta.
+
+5.3 Especificación OpenAPI
+
+La definición OpenAPI en formato JSON se encuentra disponible públicamente en:
+
+https://passcheck-api.onrender.com/openapi.json
+
+Esta especificación confirma que la API cumple con el estándar OpenAPI 3.1.
+
+6. URLs públicas del servicio
+
+Servicio base:
+https://passcheck-api.onrender.com
+
+Health check:
+https://passcheck-api.onrender.com/health
+
+Swagger UI:
+https://passcheck-api.onrender.com/docs
+
+OpenAPI JSON:
+https://passcheck-api.onrender.com/openapi.json
+
+7. Conclusiones
+
+Con la realización de este hito se ha demostrado que la aplicación PassCheck API:
+
+Funciona correctamente en un entorno de producción
+
+Puede desplegarse en un entorno PaaS real
+
+Expone endpoints accesibles públicamente
+
+Dispone de documentación automática estandarizada
+
+Sigue buenas prácticas de despliegue moderno mediante Docker
+
+El uso de Render ha permitido validar un escenario realista de despliegue cloud, completando el ciclo de desarrollo, contenerización y publicación de la aplicación.
+
