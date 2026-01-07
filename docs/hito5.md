@@ -2,89 +2,67 @@
 
 ## 1. Introducción
 
-En este quinto hito he realizado el despliegue de la aplicación **PassCheck API** en un entorno **PaaS (Platform as a Service)**, con el objetivo de publicar el servicio en un entorno cloud real y accesible desde Internet.
+En este quinto hito se ha realizado el despliegue de la aplicación **PassCheck API** en un entorno **PaaS (Platform as a Service)**, con el objetivo de publicar el servicio en un entorno cloud real y accesible desde Internet.
 
-El propósito de este hito es validar que la aplicación desarrollada en los hitos anteriores no solo funciona en local, sino que es **desplegable, operativa y verificable en un entorno de producción**, siguiendo prácticas habituales en entornos profesionales.
+El propósito principal de este hito es validar que la aplicación desarrollada en los hitos anteriores no solo funciona correctamente en un entorno local, sino que es **desplegable, operativa y verificable en un entorno de producción**, siguiendo prácticas habituales utilizadas en entornos profesionales.
 
 ---
 
 ## 2. Descripción de la aplicación desplegada
 
-La aplicación desplegada es **PassCheck API**, una API REST desarrollada con **FastAPI** que permite comprobar si una contraseña ha aparecido en brechas de seguridad conocidas, utilizando el servicio externo *Have I Been Pwned*.
+La aplicación desplegada es **PassCheck API**, una API REST desarrollada con **FastAPI** que permite comprobar si una contraseña ha aparecido en brechas de seguridad conocidas, utilizando el servicio externo **Have I Been Pwned**.
 
 La API expone los siguientes endpoints principales:
 
-- `POST /check`: comprueba si una contraseña ha sido comprometida.
-- `GET /health`: endpoint de estado para verificar que el servicio está operativo.
+- **POST `/check`**: comprueba si una contraseña ha sido comprometida.
+- **GET `/health`**: endpoint de estado para verificar que el servicio está operativo.
 
-Además, la aplicación genera automáticamente documentación **OpenAPI** accesible mediante Swagger UI.
+Además, la aplicación genera automáticamente documentación **OpenAPI**, accesible mediante **Swagger UI**, lo que facilita la exploración y el consumo de la API.
 
 ---
 
 ## 3. Plataforma PaaS seleccionada
 
-Para el despliegue se ha seleccionado **Render** como plataforma PaaS.
+Para el despliegue se ha seleccionado la plataforma **Render**, ya que ofrece:
 
-Esta elección se ha basado en los siguientes criterios:
+- Integración directa con repositorios **GitHub**
+- Soporte nativo para aplicaciones contenerizadas con **Docker**
+- Gestión automática de puertos dinámicos mediante la variable de entorno `PORT`
+- Certificados **HTTPS** habilitados por defecto
+- Visualización centralizada de logs
+- Plan gratuito suficiente para validaciones académicas y técnicas
 
-- Soporte nativo para aplicaciones contenarizadas con **Docker**.
-- Integración directa con **GitHub** para despliegue automático.
-- Disponibilidad de un **plan gratuito**, adecuado para proyectos académicos.
-- Facilidad de configuración y monitorización.
-- Posibilidad de desplegar el servicio en una región europea (**Frankfurt – EU Central**).
-
----
-
-## 4. Proceso de despliegue
-
-### 4.1 Preparación de la aplicación
-
-Antes del despliegue se realizaron ajustes para garantizar la compatibilidad con un entorno PaaS:
-
-- Uso de **puerto dinámico** proporcionado por la plataforma.
-- Definición de un endpoint `/health` para monitorización.
-- Ejecución de la aplicación mediante **Uvicorn** dentro de un contenedor Docker.
-
-La imagen Docker fue validada previamente en local para asegurar su correcto funcionamiento.
+El servicio se configuró como un **Web Service**, conectado directamente a la rama `main` del repositorio del proyecto.
 
 ---
 
-### 4.2 Despliegue en Render
+## 4. Evidencias del despliegue en Render
 
-El despliegue se realizó conectando el repositorio GitHub a Render y configurando un **Web Service** con runtime Docker.  
-La plataforma se encargó automáticamente de la construcción de la imagen y del despliegue del servicio.
+### 4.1 Panel del servicio en Render
 
-**Evidencia del servicio desplegado en Render:**
+En la siguiente imagen se observa el panel de Render con el servicio **passcheck-api** desplegado correctamente y en estado **Live**:
 
-![Render Dashboard](img/hito5/01-render-dashboard.png)
-
----
-
-## 5. Arquitectura final en producción
-
-La arquitectura final del sistema desplegado es la siguiente:
-
-- Cliente HTTP
-- Plataforma PaaS Render
-- Contenedor Docker
-- FastAPI + Uvicorn
-- Servicio externo Have I Been Pwned
-
-Toda la infraestructura es gestionada por la plataforma PaaS, sin necesidad de administrar servidores manualmente.
+![Panel del servicio en Render](img/hito5/01-render-dashboard.png)
 
 ---
 
-## 6. Verificación del servicio desplegado
+### 4.2 Logs de despliegue y arranque del servicio
 
-Una vez completado el despliegue, se verificó el correcto funcionamiento del servicio mediante las siguientes URLs públicas:
+Los logs del servicio confirman que:
 
-- **URL base del servicio**  
-  https://passcheck-api.onrender.com
+- La imagen Docker se construyó correctamente
+- El proceso Uvicorn se inició sin errores
+- Render detectó correctamente el puerto asignado dinámicamente
+- El servicio quedó disponible públicamente
 
-- **Healthcheck**  
-  https://passcheck-api.onrender.com/health
+![Logs del servicio en Render](img/hito5/02-render-logs-live.png)
 
-**Respuesta obtenida:**
-```json
-{ "status": "ok" }
+---
 
+## 5. Verificación de endpoints públicos
+
+### 5.1 Endpoint de salud (`/health`)
+
+El endpoint de verificación de estado responde correctamente indicando que el servicio está operativo.
+
+**URL pública:**
