@@ -42,7 +42,7 @@ El servicio fue configurado como un **Web Service**, enlazado a la rama `main` d
 
 El panel de Render muestra el servicio **passcheck-api** desplegado correctamente y en estado *Live*.
 
-![Panel del servicio en Render](img/hito5/01-render-dashboard.png)
+![Panel del servicio en Render](img/hito5/01-render-dasboard.png)
 
 ---
 
