@@ -71,6 +71,8 @@ https://passcheck-api.onrender.com/health
 
 Evidencia:
 
+![Logs del servicio en Render](img/hito5/03-health-endpoint.png)
+
 5.2 Documentación interactiva (Swagger UI)
 
 FastAPI genera automáticamente la documentación interactiva accesible en:
@@ -79,6 +81,8 @@ https://passcheck-api.onrender.com/docs
 
 En esta interfaz se pueden visualizar los endpoints disponibles, así como los esquemas de petición y respuesta.
 
+![Logs del servicio en Render](img/hito5/04-swagger-ui.png)
+
 5.3 Especificación OpenAPI
 
 La definición OpenAPI en formato JSON se encuentra disponible públicamente en:
@@ -86,6 +90,8 @@ La definición OpenAPI en formato JSON se encuentra disponible públicamente en:
 https://passcheck-api.onrender.com/openapi.json
 
 Esta especificación confirma que la API cumple con el estándar OpenAPI 3.1.
+
+![Logs del servicio en Render](img/hito5/openapi_json.png)
 
 6. URLs públicas del servicio
 
