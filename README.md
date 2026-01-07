@@ -125,5 +125,9 @@ https://github.com/CarlosGutierrezR/passcheck-api/pull/6
 https://github.com/cvillalonga/CC-25-26/pull/56
 (https://github.com/CarlosGutierrezR/passcheck-api/blob/main/docs/hito3.md)
 
+# Hito 4
+https://github.com/cvillalonga/CC-25-26/pull/80
+(https://github.com/CarlosGutierrezR/passcheck-api/blob/main/docs/hito4.md)
+
 Licencia
 MIT — ver LICENSE.
