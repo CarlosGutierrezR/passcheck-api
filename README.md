@@ -64,6 +64,64 @@ sequenceDiagram
     API-->>C: { "pwned": bool, "count": N }
 ```
 
+Despliegue en la nube (PaaS)
+
+La aplicación está desplegada en Render, una plataforma PaaS (Platform as a Service) que permite ejecutar aplicaciones Docker con integración directa con GitHub.
+
+Justificación del PaaS elegido
+
+Se evaluaron distintas opciones (Railway, Fly.io, AWS), seleccionándose Render por:
+
+Integración directa con GitHub
+
+Despliegue automático en cada push a main
+
+Soporte nativo para Docker
+
+Gestión automática del puerto (PORT)
+
+Logs y métricas integradas
+
+Plan gratuito suficiente para fines académicos
+
+El servicio se ejecuta como Web Service Docker en la región europea (Frankfurt).
+
+URLs públicas del servicio
+
+Servicio base
+https://passcheck-api.onrender.com
+
+Health check
+https://passcheck-api.onrender.com/health
+
+Swagger UI
+https://passcheck-api.onrender.com/docs
+
+OpenAPI JSON
+https://passcheck-api.onrender.com/openapi.json
+
+Tecnologías utilizadas
+
+Python 3
+
+FastAPI
+
+Uvicorn
+
+Docker
+
+Git & GitHub
+
+Render (PaaS)
+
+OpenAPI 3.1 / Swagger
+
+GitHub Actions (CI)
+
+CodeQL
+
+
+
 Requisitos
 Windows (PowerShell/Git Bash) o Linux/macOS
 
