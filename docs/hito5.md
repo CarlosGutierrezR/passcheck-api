@@ -123,3 +123,6 @@ Sigue buenas prácticas de despliegue moderno mediante Docker
 
 El uso de Render ha permitido validar un escenario realista de despliegue cloud, completando el ciclo de desarrollo, contenerización y publicación de la aplicación.
 
+Entrega Hito:
+https://github.com/cvillalonga/CC-25-26/pull/108
+
